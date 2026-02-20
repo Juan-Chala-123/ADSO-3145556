@@ -6,4 +6,8 @@
 
 ## Ficha: 3145556
 
-Enlaces:
+Enlace Figma:
+https://www.figma.com/design/SNZXRFfTt34xzKvbcdcBwa/carrito-compras?node-id=0-1&t=wSy8eT620fh2Uiqr-1
+
+Enlace db:
+https://www.drawdb.app/editor?shareId=5f40a29b8ee6f3cc19e4e74e9b825eb0
