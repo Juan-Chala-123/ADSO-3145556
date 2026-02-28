@@ -1,0 +1,154 @@
+@startuml
+class Person {
+    -id: int
+    -name: string
+    -email: string
+    -phone: string
+}
+
+class Role {
+    -id: int
+    -name: string
+    -description: string
+}
+
+class User {
+    -id: int
+    -username: string
+    -password: string
+    -email: string
+    -phone: String
+    -address: String
+}
+
+class Cart {
+    -id: int
+    -user_id: User
+    -date: date
+}
+
+class Product {
+    -id: int
+    -name: String
+    -description: String
+    -category_id: Category
+    -image: String
+    -featured: int
+}
+
+class Category {
+    -id: int
+    -name: String
+    -description: String
+}
+
+class Inventary {
+    -id: int
+    -product_id: Product
+    -quantity: int
+    -price: double
+    -supplier_id: int
+}
+
+class Supplier {
+    -id: int
+    -name: String
+    -description: String
+    -addresses: String
+    -num_contact: String
+}
+
+class PaymentMethod {
+    -id: int
+    -name: String
+    -description: String
+}
+
+class Order {
+    -id: int
+    -user_id: User
+    -date: date
+    -address: String
+    -payment_method: PaymentMethod
+}
+
+' Sistema de permisos
+class Module {
+    -id: int
+    -name: string
+    -description: string
+}
+
+class View {
+    -id: int
+    -name: string
+    -description: string
+}
+
+class Action {
+    -id: int
+    -name: string
+    -description: string
+}
+
+' Tablas intermedias
+class RoleModule {
+    -id: int
+    -role_d: Role
+    -module_id: Module
+}
+
+class ViewModule {
+    -id: int
+    -view_id: View
+    -module_id: Module
+}
+
+class ViewAction {
+    -id: int
+    -view_id: View
+    -module_id: Module
+}
+
+class UserRole {
+    -id: int
+    -userId: User
+    -roleId: Role
+}
+
+class CartItems {
+    -id: int
+    -cart_id: Cart
+    -product_id: Product
+    -quantity: int
+    -total_price: double
+}
+
+class OrderItem {
+    -id: int
+    -order_id: Order
+    -product_id: Product
+    -quantity: int
+    -total_price: double
+}
+
+' Relaciones
+UserRole *-- User 
+UserRole *-- Role
+RoleModule *-- Role
+RoleModule *-- Module
+Cart --* CartItems
+Product --* CartItems
+User -- Cart
+Product -- Category
+ViewModule *-- View
+ViewModule *-- Module
+Inventary o-- Product
+Inventary -- Supplier
+Order -- User
+Order -- PaymentMethod
+View --* ViewAction
+Action --* ViewAction
+OrderItem *-- Order
+OrderItem *-- Product
+@enduml
