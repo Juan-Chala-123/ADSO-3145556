@@ -8,7 +8,8 @@ rectangle "Sistema de compras" {
     usecase "Gestionar carrito" as UC4
     usecase "Iniciar Sesion" as UC5
     usecase "Realizar compra" as UC6
-    usecase "Generar factura" as UC7
+    usecase "Procesar pago" as UC7
+    usecase "Generar factura" as UC8
     ' usecase "Elimnar productos" as UC8
     ' usecase "Modificar" as UC9
     
@@ -23,6 +24,7 @@ Cliente --> UC6
 
 UC6 --> UC5 : << include >>
 UC6 --> UC7 : << include >>
+UC7 --> UC8 : << include >>
 ' UC4 <-- UC8 : << extends >>
 ' UC4 <-- UC9 : << extends >>
 @enduml
