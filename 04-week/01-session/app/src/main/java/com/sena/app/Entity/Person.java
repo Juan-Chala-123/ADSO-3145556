@@ -2,8 +2,6 @@ package com.sena.app.Entity;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDateTime;
-
 @Entity
 @Table(name = "person")
 public class Person {
