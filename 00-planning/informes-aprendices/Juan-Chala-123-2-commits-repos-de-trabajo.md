@@ -188,12 +188,19 @@
 - **Enlace del repositorio:** https://github.com/school-guardian-project/sg-ms-api-gateway
 - **Tipo:** Otro
 - **Visibilidad:** Público
-- **Total de commits en el periodo:** 1
-- **Qué hice (2 a 3 líneas):** Inicialicé el repositorio del API Gateway como punto de entrada para la comunicación con los microservicios del sistema.
+- Total de commits en el periodo: 8
+- Qué hice (2 a 3 líneas): Inicialicé y desarrollé el API Gateway como punto de entrada para la comunicación con los microservicios del sistema. Configuré rutas de acceso mediante Kong para servicios como User Management, IAM, Fleet, School Management y Notification, además de configuraciones de CORS.
 
 | Commit ID | Fecha y hora | Mensaje |
 |---|---|---|
 | [8c5cb03](https://github.com/school-guardian-project/sg-ms-api-gateway/commit/8c5cb03) | 16-09-2026 16:03 | Initial commit |
+| [8758d43](https://github.com/school-guardian-project/sg-ms-api-gateway/commit/8758d43) | 16-09-2026 17:15 | chore: add Kong API Gateway Docker setup |
+| [2d01f3d](https://github.com/school-guardian-project/sg-ms-api-gateway/commit/2d01f3d) | 20-09-2026 17:29 | chore(kong): add route and config for ms-user-management |
+| [1a851f6](https://github.com/school-guardian-project/sg-ms-api-gateway/commit/1a851f6) | 23-09-2026 09:24 | refactor(kong-user-management): add CORS plugin for frontend at localhost:4200 |
+| [ebd8c3e](https://github.com/school-guardian-project/sg-ms-api-gateway/commit/ebd8c3e) | 29-09-2026 21:06 | chore(kong): route /api/v1/auth to ms-iam with cors and rate limiting |
+| [677f5cc](https://github.com/school-guardian-project/sg-ms-api-gateway/commit/677f5cc) | 30-09-2026 04:13 | feat(gateway): add ms-fleet route |
+| [bdf06fb](https://github.com/school-guardian-project/sg-ms-api-gateway/commit/bdf06fb) | 30-09-2026 06:58 | feat(gateway): add ms-school-management route |
+| [4a9e36c](https://github.com/school-guardian-project/sg-ms-api-gateway/commit/4a9e36c) | 30-09-2026 09:18 | feat: add ms-notification route to Kong gateway |
 
 ## 3. Verificación del aprendiz
 
